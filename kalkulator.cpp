@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -42,12 +43,14 @@ int main()
     cin >> kedua;
 
     float hasil = result(pertama, kedua, operation);
-    if (hasil == 1 && operation == '/')
+
+    if (hasil == -1)
     {
-        cout << "Hasil: " << hasil << endl;
+        cout << "Terjadi kesalahan dalam perhitungan.\n";
     }
     else
     {
+        cout << fixed << setprecision(2); // Format desimal dengan 2 angka di belakang koma
         cout << "Hasil: " << hasil << endl;
     }
 
