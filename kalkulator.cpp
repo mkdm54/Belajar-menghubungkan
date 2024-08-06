@@ -34,22 +34,40 @@ int main()
     char operation;
     char ulang;
 
-    cout << "Masukkan angka pertama: ";
-    cin >> pertama;
-    cout << "Masukkan operasi: ";
-    cin >> operation;
-    cout << "Masukkan angka kedua: ";
-    cin >> kedua;
+    do
+    {
+        cout << "Masukkan angka pertama: ";
+        cin >> pertama;
+        cout << "Masukkan operasi: ";
+        cin >> operation;
+        cout << "Masukkan angka kedua: ";
+        cin >> kedua;
 
-    float hasil = result(pertama, kedua, operation);
-    if (hasil == 1 && operation == '/')
-    {
-        cout << "Hasil: " << hasil << endl;
-    }
-    else
-    {
-        cout << "Hasil: " << hasil << endl;
-    }
+        float hasil = result(pertama, kedua, operation);
+        if (hasil == 1 && operation == '/')
+        {
+            cout << "Hasil: " << hasil << endl;
+        }
+        else
+        {
+            cout << "Hasil: " << hasil << endl;
+        }
+
+        cout << "Apakah ingin mengulang (y/n)? ";
+        cin >> ulang;
+        if (ulang == 'y')
+        {
+            break;
+        }
+        else if (ulang == 'n')
+        {
+            cout << "Terima kasih" << endl;
+        }
+        else
+        {
+            cout << "Opsi tidak tersedia" << endl;
+        }
+    } while (ulang == 'y');
 
     return 0;
 }
