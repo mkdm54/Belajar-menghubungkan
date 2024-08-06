@@ -32,6 +32,7 @@ int main()
 {
     float pertama, kedua;
     char operation;
+    char ulang;
 
     cout << "Masukkan angka pertama: ";
     cin >> pertama;
